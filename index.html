@@ -4,12 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/normalize.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://kit.fontawesome.com/33a9f9b1ef.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="contenedor">
+        <header>
+            <div class="caja-logo">
+                <img src="./assets/img/Logo.png" alt="logo" class="logo">
+            </div>
+        </header>
+        <main>
+            <section class="caja-app">
+                <div class="caja-texto">
+                    <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui" class="texto-usuario"></textarea>
+                    <p><i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="caja-botones">
+                    <button class="boton primario">Encriptar</button>
+                    <button class="boton secundario">Desencriptar</button>
+                </div>
+            </section>
+            <section class="caja-revelacion">
+                <div class="caja-imgrevelacion">
+                    <img src="./assets/img/looking.png" alt="ilustracion-lupa" class="ilustracion-revelacion">
+                </div>
+                <div class="caja-texto-revelacion">
+                    <h3>Ningún mensaje fue encontrado</h3>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    <button class="boton secundario hidden">Copiar</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="caja-parrafo-footer">
+                <p>Hecho con <i class="fa-solid fa-heart green"></i> por Martín Olmedo</p>
+            </div>
+        </footer>
+    </div>
     <script src="./assets/app.js"></script>
 </body>
 </html>

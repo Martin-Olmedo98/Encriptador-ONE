@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    padding: 20px;
+    background-color: #F3F5FC;
+}
+
+.contenedor header {
+    width: 100%;
+}
+
+.contenedor header .caja-logo {
+    max-width: 7.5rem;
+    padding: 0 20px;
+}
+
+.contenedor header .caja-logo .logo {
+    width: 100%;
+}
+
+.contenedor main {
+    width: 100%;
+    display: flex;
+    min-height: 90vh;
+}
+
+.contenedor main .caja-app {
+    padding-top: 4rem;
+    padding-left: 10rem;
+    padding-right: 2rem;
+    width: 75%;
+}
+
+.contenedor main .caja-app .caja-texto {
+    width: 100%;
+    height: 85%;
+}
+
+.contenedor main .caja-app .caja-texto .texto-usuario{
+    width: 100%;
+    background-color: #F3F5FC;
+    font-size: 2rem;
+    resize: none;
+    border: none;
+    height: 90%;
+    color: #00BFA6;
+}
+
+.contenedor main .caja-app .caja-texto .texto-usuario:focus{
+    outline: none;
+}
+
+.contenedor main .caja-app .caja-texto .texto-usuario::placeholder {
+    color: #00BFA6;
+}
+
+.contenedor main .caja-app .caja-botones {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.boton {
+    padding: 1rem 5rem;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.boton:hover {
+    opacity: 1;
+}
+
+.contenedor main .caja-app .caja-botones .primario {
+    margin-right: 0.7rem;
+    border: none;
+    background-color: #00BFA6;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.secundario {
+    border: #00BFA6 1px solid;
+    color: #00BFA6;
+    background-color: #FFFFFF;
+}
+
+.contenedor main .caja-revelacion {
+    width: 25%;
+    border-radius: 2rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contenedor main .caja-revelacion .caja-texto-revelacion h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 120%;
+    color: #343A40;
+}
+
+.contenedor main .caja-revelacion .caja-texto-revelacion p {
+    font-size: 1rem;
+    line-height: 150%;
+    color: #495057;
+}
+
+.hidden {
+    display: none;
+}
+
+.green {
+    color: #00BFA6;
+}
+
+.contenedor footer {
+    border: 0.1px;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

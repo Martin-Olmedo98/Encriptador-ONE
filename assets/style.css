@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    font-size: 1rem;
 }
 
 .contenedor {
@@ -38,6 +39,10 @@
 .contenedor main .caja-app .caja-texto {
     width: 100%;
     height: 85%;
+}
+
+.contenedor main .caja-app .caja-texto p {
+    font-size: 0.7rem;
 }
 
 .contenedor main .caja-app .caja-texto .texto-usuario{
@@ -117,6 +122,13 @@
     color: #495057;
 }
 
+.contenedor main .caja-revelacion .caja-imgrevelacion {
+    width: 90%;
+}
+.contenedor main .caja-revelacion .caja-imgrevelacion .ilustracion-revelacion {
+    width: 100%;
+}
+
 .hidden {
     display: none;
 }
@@ -131,4 +143,45 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 920px)  {
+    .contenedor main {
+        flex-direction: column;
+    }
+
+    .contenedor main .caja-app {
+        padding-left: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .contenedor main .caja-app .caja-botones button {
+        width: 48%;
+        padding: 1rem 0;
+    }
+
+    .contenedor main .caja-revelacion {
+        width: 100%;
+    }
+
+    .contenedor main .caja-revelacion .caja-imgrevelacion {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .contenedor main .caja-app .caja-botones button {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .contenedor main .caja-app .caja-botones .primario {
+        margin-bottom: 1rem;
+    }
+
+    .contenedor main .caja-app .caja-texto .texto-usuario {
+        font-size: 1rem;
+    }
 }

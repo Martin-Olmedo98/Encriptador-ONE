@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/normalize.css">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="https://kit.fontawesome.com/33a9f9b1ef.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Encriptador de Texto</title>
 </head>
 <body>
     <div class="contenedor">
@@ -23,7 +23,7 @@
             <section class="caja-app">
                 <div class="caja-texto">
                     <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui" class="texto-usuario"></textarea>
-                    <p><i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos</p>
+                    <p id="aclaracion"><i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos</p>
                 </div>
                 <div class="caja-botones">
                     <button class="boton primario" id="encriptar">Encriptar</button>
@@ -39,7 +39,7 @@
                     <p id="mensaje">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
                 <div class="boton-copiar hidden" id="caja-boton-copiar">
-                    <button class="boton secundario">Copiar</button>
+                    <button class="boton secundario" id="copiar">Copiar</button>
                 </div>
             </section>
         </main>

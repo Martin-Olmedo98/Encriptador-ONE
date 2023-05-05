@@ -1,7 +1,9 @@
+const parrafo = document.getElementById('mensaje');
 const botonEncriptar = document.getElementById('encriptar');
 const botonDesencriptar = document.getElementById('desencriptar');
+const botonCopiar = document.getElementById('copiar');
 const expresion = {
-    texto: /^[a-z0-9]{1,200}$/
+    texto: /^[a-z0-9\s]+$/
 }
 
 function encriptar(){
@@ -48,23 +50,43 @@ function modificarContenido(){
     cajaBoton.classList.remove('hidden');
 }
 
+function resetearContenido(){
+    const imagen = document.getElementById('img-ilustracion');
+    const subtitulo = document.getElementById('subtitulo');
+    const cajaBoton = document.getElementById('caja-boton-copiar');
+    imagen.classList.remove('hidden');
+    subtitulo.classList.remove('hidden');
+    cajaBoton.classList.add('hidden');
+    parrafo.innerHTML = "Ingresa el texto que desees encriptar o desencriptar";
+}
+
 function mostrarEncriptacion(){
-    const parrafo = document.getElementById('mensaje');
     if(expresion.texto.test(encriptar())){
         modificarContenido();
         parrafo.innerHTML = encriptar();
+        botonCopiar.addEventListener('click',() =>{
+            navigator.clipboard.writeText(encriptar())
+            parrafo.innerHTML = "Texto copiado";
+            setTimeout(resetearContenido, 2000);
+        })
     } else {
-        alert('Solo letras minúsculas y sin acentos')
+        alert('Solo letras minúsculas y sin acentos');
+        resetearContenido();
     }
 }
 
 function mostrarDesencriptacion(){
-    const parrafo = document.getElementById('mensaje');
     if(expresion.texto.test(desencriptar())){
         modificarContenido();
         parrafo.innerHTML = desencriptar();
+        botonCopiar.addEventListener('click',() =>{
+            navigator.clipboard.writeText(desencriptar())
+            parrafo.innerHTML = "Texto copiado";
+            setTimeout(resetearContenido, 2000);
+        })
     } else {
-        alert('Solo letras minúsculas y sin acentos')
+        alert('Solo letras minúsculas y sin acentos');
+        resetearContenido();
     }
 }
 

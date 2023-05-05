@@ -23,3 +23,15 @@ function encriptar(){
 
     return textoEncriptado;
 }
+
+function desencriptar(){
+    let textoEncriptado = document.getElementById('texto').value;
+    let textoDesencriptado = textoEncriptado
+        .replaceAll("ai", "a")
+        .replaceAll("enter", "e")
+        .replaceAll("imes","i")
+        .replaceAll("ober", "o")
+        .replaceAll("ufat", "u");
+    
+    return textoDesencriptado;
+}

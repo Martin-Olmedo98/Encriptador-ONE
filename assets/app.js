@@ -76,5 +76,9 @@ function pantallaEncriptacion(accion){
     }
 }
 
-botonEncriptar.addEventListener('click', pantallaEncriptacion(encriptar));
-botonDesencriptar.addEventListener('click', pantallaEncriptacion(desencriptar));
+botonEncriptar.addEventListener('click', ()=>{
+    pantallaEncriptacion(encriptar());
+});
+botonDesencriptar.addEventListener('click', ()=>{
+    pantallaEncriptacion(desencriptar());
+});

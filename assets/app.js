@@ -60,12 +60,13 @@ function resetearContenido(){
     parrafo.innerHTML = "Ingresa el texto que desees encriptar o desencriptar";
 }
 
-function mostrarEncriptacion(){
+
+function pantallaEncriptacion(accion){
     if(expresion.texto.test(encriptar())){
         modificarContenido();
-        parrafo.innerHTML = encriptar();
+        parrafo.innerHTML = accion;
         botonCopiar.addEventListener('click',() =>{
-            navigator.clipboard.writeText(encriptar())
+            navigator.clipboard.writeText(accion)
             parrafo.innerHTML = "Texto copiado";
             setTimeout(resetearContenido, 2000);
         })
@@ -75,20 +76,5 @@ function mostrarEncriptacion(){
     }
 }
 
-function mostrarDesencriptacion(){
-    if(expresion.texto.test(desencriptar())){
-        modificarContenido();
-        parrafo.innerHTML = desencriptar();
-        botonCopiar.addEventListener('click',() =>{
-            navigator.clipboard.writeText(desencriptar())
-            parrafo.innerHTML = "Texto copiado";
-            setTimeout(resetearContenido, 2000);
-        })
-    } else {
-        alert('Solo letras minúsculas y sin acentos');
-        resetearContenido();
-    }
-}
-
-botonEncriptar.addEventListener('click', mostrarEncriptacion);
-botonDesencriptar.addEventListener('click', mostrarDesencriptacion);
+botonEncriptar.addEventListener('click', pantallaEncriptacion(encriptar));
+botonDesencriptar.addEventListener('click', pantallaEncriptacion(desencriptar));

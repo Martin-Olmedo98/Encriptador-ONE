@@ -43,6 +43,7 @@
 
 .contenedor main .caja-app .caja-texto p {
     font-size: 0.7rem;
+    color: #495057;
 }
 
 .contenedor main .caja-app .caja-texto .texto-usuario{
@@ -120,6 +121,8 @@
     font-size: 1rem;
     line-height: 150%;
     color: #495057;
+    text-align: center;
+    word-break: break-all;
 }
 
 .contenedor main .caja-revelacion .caja-imgrevelacion {

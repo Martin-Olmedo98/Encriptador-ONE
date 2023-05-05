@@ -1,5 +1,8 @@
 const botonEncriptar = document.getElementById('encriptar');
 const botonDesencriptar = document.getElementById('desencriptar');
+const expresion = {
+    texto: /^[a-z0-9]{1,200}$/
+}
 
 function encriptar(){
     const textoDesencriptado = document.getElementById('texto').value;
@@ -47,17 +50,21 @@ function modificarContenido(){
 
 function mostrarEncriptacion(){
     const parrafo = document.getElementById('mensaje');
-    if(encriptar() != ""){
+    if(expresion.texto.test(encriptar())){
         modificarContenido();
         parrafo.innerHTML = encriptar();
+    } else {
+        alert('Solo letras minúsculas y sin acentos')
     }
 }
 
 function mostrarDesencriptacion(){
     const parrafo = document.getElementById('mensaje');
-    if(desencriptar() != ""){
+    if(expresion.texto.test(desencriptar())){
         modificarContenido();
         parrafo.innerHTML = desencriptar();
+    } else {
+        alert('Solo letras minúsculas y sin acentos')
     }
 }
 
